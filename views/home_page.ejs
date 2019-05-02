@@ -1,3 +1,32 @@
 <h1 class="mt-4">Home Page</h1>
-<p class="lead mb-3">Hello,  <%= name %></p>
-<a href="/users/logout" class="btn btn-warning">Logout</a>
+<p class="lead mb-3">Hello,  <%= name %>
+<p class="lead mb-3">Vaild Email:  <%= email %>
+<p class="lead mb-3">Registered date:  <%= date %>
+
+<a href="/users/logout"  class="btn btn-warning" style="float: right;">Logout</a></p>
+<p class="lead mt-4">I want to read my daily! <a href="/second_page">Daily Page</a>
+
+<div class="feature-wrapper bg-primary pt-5 pb-5 mt-5 mt-lg-2">
+    <div class="col-md-6 m-auto">
+        <h1 class="text-center mb-3">A beautiful daily</h1>
+        <% include ./partials/messages %> 
+          <form action="/users/home_page" method="POST">
+            <div class="form-group">
+              <label for="comment">Today`s feelings</label>
+              <textarea 
+                maxlength="500"
+                rows="5" 
+                type="text"
+                id="comment"
+                name="comment"
+                class="form-control"
+                placeholder="note..."
+                rows="20" 
+              >
+              </textarea>
+          </div>      
+          <button type="submit" class="btn btn-primary btn-lg" style="float: right;">Send</button>
+          <p></p>
+        </form>
+      </div>
+  </div>
